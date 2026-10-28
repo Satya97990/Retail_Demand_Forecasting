@@ -1,0 +1,56 @@
+{
+  "project": "Retail Demand Forecasting",
+  "model_type": "HistGradientBoostingRegressor",
+  "feature_columns": [
+    "store",
+    "item",
+    "day_of_week",
+    "day_of_month",
+    "month",
+    "day_of_year",
+    "week_of_year",
+    "quarter",
+    "is_weekend",
+    "lag_1",
+    "lag_7",
+    "lag_14",
+    "lag_28",
+    "rolling_mean_7",
+    "rolling_mean_14",
+    "rolling_mean_28",
+    "rolling_std_7"
+  ],
+  "target_column": "sales",
+  "forecasting_strategy": "recursive multi-step daily forecasting",
+  "validation_strategy": "last 90 days held out; no random shuffling",
+  "validation_start": "2017-10-03",
+  "validation_end": "2017-12-31",
+  "validation_horizon_days": 90,
+  "validation_rows": 45000,
+  "validation_model_metrics": {
+    "mae": 6.124130886615767,
+    "rmse": 7.943483452419241,
+    "wape_pct": 11.209928449566751,
+    "smape_pct": 12.901723008616617,
+    "bias": 0.22685766005229432
+  },
+  "seasonal_naive_metrics": {
+    "mae": 11.64868888888889,
+    "rmse": 15.413195645290434,
+    "wape_pct": 21.322367433571877,
+    "smape_pct": 22.270424653354027,
+    "bias": 6.164333333333333
+  },
+  "training_rows_after_feature_warmup": 899000,
+  "final_training_start": "2013-01-01",
+  "final_training_end": "2017-12-31",
+  "stores": 10,
+  "items": 50,
+  "trained_at_utc": "2026-10-28T08:43:54.623247+00:00",
+  "random_state": 42,
+  "notes": [
+    "Validation forecasts are recursive: later validation days use earlier predictions.",
+    "The final model is refit on all available historical training rows after validation.",
+    "Kaggle competition data is excluded from Git using .gitignore."
+  ]
+}

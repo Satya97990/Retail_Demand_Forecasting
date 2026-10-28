@@ -1,0 +1,28 @@
+# Kaggle competition data: do not publish or redistribute raw files.
+data/raw/*.csv
+data/raw/*.zip
+!data/raw/.gitkeep
+# Generated local outputs and model artifacts.
+data/processed/*
+!data/processed/.gitkeep
+models/*.joblib
+models/*.pkl
+models/*.bin
+mlflow-data/
+mlruns/
+*.db
+*.sqlite
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+.env
+.DS_Store
+.idea/
+.vscode/
+*.egg-info/
+build/
+dist/

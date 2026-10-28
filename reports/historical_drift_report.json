@@ -1,0 +1,90 @@
+{
+  "generated_at_utc": "2026-10-28T08:44:05.849542+00:00",
+  "reference_rows": 719500,
+  "current_rows": 179500,
+  "method": "Population Stability Index (PSI), with reference quantile bins",
+  "heuristic_bands": {
+    "low": "PSI < 0.10",
+    "moderate": "0.10 <= PSI < 0.25",
+    "high": "PSI >= 0.25"
+  },
+  "features": {
+    "store": {
+      "psi": 0.0,
+      "drift_band": "low"
+    },
+    "item": {
+      "psi": 0.0,
+      "drift_band": "low"
+    },
+    "day_of_week": {
+      "psi": 0.0001139807865940326,
+      "drift_band": "low"
+    },
+    "day_of_month": {
+      "psi": 0.001473537701949691,
+      "drift_band": "low"
+    },
+    "month": {
+      "psi": 2.9379637072297718e-05,
+      "drift_band": "low"
+    },
+    "day_of_year": {
+      "psi": 2.0193945431885142e-05,
+      "drift_band": "low"
+    },
+    "week_of_year": {
+      "psi": 0.0003275651483002983,
+      "drift_band": "low"
+    },
+    "quarter": {
+      "psi": 1.4195446039067107e-05,
+      "drift_band": "low"
+    },
+    "is_weekend": {
+      "psi": Infinity,
+      "drift_band": "not_available"
+    },
+    "lag_1": {
+      "psi": 0.07076452464271277,
+      "drift_band": "low"
+    },
+    "lag_7": {
+      "psi": 0.07050066707930858,
+      "drift_band": "low"
+    },
+    "lag_14": {
+      "psi": 0.07085450372164612,
+      "drift_band": "low"
+    },
+    "lag_28": {
+      "psi": 0.07198263764843875,
+      "drift_band": "low"
+    },
+    "rolling_mean_7": {
+      "psi": 0.0803117609676306,
+      "drift_band": "low"
+    },
+    "rolling_mean_14": {
+      "psi": 0.08061311358753788,
+      "drift_band": "low"
+    },
+    "rolling_mean_28": {
+      "psi": 0.08189997068113833,
+      "drift_band": "low"
+    },
+    "rolling_std_7": {
+      "psi": 0.054819800967934026,
+      "drift_band": "low"
+    }
+  },
+  "interpretation_note": "PSI is a screening signal, not proof of model degradation. Verify data quality and forecast errors before deciding to retrain.",
+  "reference_period": [
+    "2013-01-29",
+    "2017-01-06"
+  ],
+  "current_period": [
+    "2017-01-07",
+    "2017-12-31"
+  ]
+}
